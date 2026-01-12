@@ -1,26 +1,30 @@
-import { sensor } from "@kit.SensorServiceKit";
+import { sensor } from '@kit.SensorServiceKit';
 
 @Entry
 @Component
-export struct Index {
+struct Index {
   @State azimuth: number = 0
 
   onPageShow() {
-    sensor.on(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
-      const x = data.x
-      const y = data.y
-      const z = data.z
-      const w = data.w
+    try {
+      sensor.on(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
+        const x = data.x
+        const y = data.y
+        const z = data.z
+        const w = data.w
 
-      const siny_cosp = 2 * (w * z + x * y)
-      const cosy_cosp = 1 - 2 * (y * y + z * z)
-      const azimuthRad = Math.atan2(siny_cosp, cosy_cosp)
-      const azimuthDeg = (azimuthRad * 180 / Math.PI + 360) % 360
+        const SINY_COSP = 2 * (w * z + x * y)
+        const COSY_COSP = 1 - 2 * (y * y + z * z)
+        const azimuthRad = Math.atan2(SINY_COSP, COSY_COSP)
+        const azimuthDeg = (azimuthRad * 180 / Math.PI + 360) % 360
 
-      this.azimuth = Math.round(azimuthDeg)
-    }, {
-      interval: 100_000_000
-    })
+        this.azimuth = Math.round(azimuthDeg)
+      }, {
+        interval: 100_000_000
+      })
+    } catch (error) {
+      //
+    }
   }
 
   aboutToAppear() {

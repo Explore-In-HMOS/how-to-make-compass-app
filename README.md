@@ -6,7 +6,7 @@
 
 # Preview
 <div>
-<img src="screenshot/img.png" width="25%" />
+<img src="screenshots/img.png" width="25%" />
 </div>
 
 # Use Cases
@@ -40,5 +40,5 @@ entry/src/main/ets
 - Huawei Watch 5
 
 # LICENSE
-**Compass App** is distributed under the terms of the MIT License.
-See the [license](/LICENSE) for more information.
+**How to use sensor data for compass app** is distributed under the terms of the **MIT License**.
+See the [LICENSE](LICENSE) for more information.

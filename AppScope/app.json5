@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.compassapp",
+    "bundleName": "com.hmosdemos.wearable.how_to_use_sensor_data_for_compass_app",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",
