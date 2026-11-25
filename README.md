@@ -2,7 +2,7 @@
 
 # How to use sensor data for compass app
 
-**CompassApp** is a lightweight direction-tracking application built using **ArkTS** for **HarmonyOS NEXT wearable devices**. It utilizes the `ROTATION_VECTOR` sensor to calculate azimuth values in real-time and visually rotates a compass image accordingly. Designed with a minimal UI and efficient sensor handling, it provides seamless directional feedback to the user.
+**CompassApp** is a lightweight direction-tracking application built using **ArkTS** for **HarmonyOS wearable devices**. It utilizes the `ROTATION_VECTOR` sensor to calculate azimuth values in real-time and visually rotates a compass image accordingly. Designed with a minimal UI and efficient sensor handling, it provides seamless directional feedback to the user.
 
 # Preview
 <div>
